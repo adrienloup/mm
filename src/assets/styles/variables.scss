@@ -1,0 +1,32 @@
+@mixin font {
+  --font-title: 'Title';
+  --font-text: 'Text';
+}
+
+@mixin color {
+  --color-1: #050505;
+  --color-2: #1e9e75;
+  --color-3: #ffdb36;
+  --color-4: #ffffff;
+}
+
+@mixin size {
+  --font-size-x-large: 6rem;
+  --font-size-large: 4rem;
+  --font-size-medium: 2rem;
+  --font-size-small: 1.25rem;
+  --font-size-x-small: 1rem;
+}
+
+@mixin spacing {
+  --spacing-large: 2.5rem;
+  --spacing-medium: 1rem;
+  --spacing-small: 0.5rem;
+}
+
+:root {
+  @include font();
+  @include color();
+  @include size();
+  @include spacing();
+}

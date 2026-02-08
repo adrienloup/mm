@@ -1,15 +1,17 @@
-:root {
-  --header-height: 60px;
-}
+$mobile-portrait: 768px;
 
 .header {
+  order: 3;
   position: sticky;
-  top: 0;
+  bottom: 0;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  height: var(--header-height);
-  padding: 0 2rem;
-  background-color: #fff;
-  border-bottom: 1px solid #f3f3f3;
+  height: 4rem;
+  background-color: var(--color-4);
+
+  @media (min-width: $mobile-portrait) {
+    order: initial;
+    top: 0;
+    bottom: initial;
+    height: 5rem;
+  }
 }

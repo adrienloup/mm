@@ -1,0 +1,46 @@
+$mobile-portrait: 768px;
+
+.hgroup {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-small);
+  background-color: var(--color-2);
+
+  @media (min-width: $mobile-portrait) {
+    top: 5rem;
+    padding: var(--spacing-medium);
+  }
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-title), sans-serif;
+  font-size: var(--font-size-large);
+  color: var(--color-4);
+
+  @media (min-width: $mobile-portrait) {
+    font-size: var(--font-size-x-large);
+  }
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  font-size: var(--font-size-small);
+  color: var(--color-3);
+  text-shadow:
+    2px 0 0 var(--color-2),
+    -2px 0 0 var(--color-2),
+    0 2px 0 var(--color-2),
+    0 -2px 0 var(--color-2);
+
+  @media (min-width: $mobile-portrait) {
+    font-size: var(--font-size-medium);
+  }
+}

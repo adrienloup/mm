@@ -1,43 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
+@use '@/src/assets/styles/index' as *;
 
-  &,
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
-}
-
-body {
-  background-color: #fff;
-  line-height: 1;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  font-synthesis: style;
-  font-weight: 700;
-  font-size: 14px;
-  color: #191919;
-}
-
-input,
-button {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-button {
-  cursor: pointer;
-}
-
-#app {
+#_mm_d2zje_1 {
+  position: relative;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
-  background-color: #fafafa;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-2);
+  font-family: var(--font-text), sans-serif;
+  color: var(--color-1);
 }
