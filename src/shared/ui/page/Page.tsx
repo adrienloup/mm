@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 // import { Outlet, useLocation } from 'react-router-dom';
 // import type { ChildrenType } from '@/src/shared/type/Children.ts';
-import { cubicBezier } from 'motion-utils';
 import type { ChildrenType } from '@/src/shared/type/Children.ts';
 import { Footer } from '@/src/shared/ui/footer/Footer.tsx';
 import { Header } from '@/src/shared/ui/header/Header.tsx';
@@ -49,7 +48,8 @@ export const Page = ({ children }: { children: ChildrenType }) => {
         initial={{ opacity: 0, x: 10 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -10 }}
-        transition={{ duration: 0.25, ease: cubicBezier(0.25, 0.8, 0.25, 1) }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+        // transition={{ duration: 0.25, ease: cubicBezier(0.16, 1, 0.3, 1) }}
       >
         {children}
       </motion.main>

@@ -5,13 +5,13 @@ $mobile-portrait: 768px;
   position: sticky;
   bottom: 0;
   z-index: 2;
-  height: 4rem;
+  height: 2.5rem;
   background-color: var(--color-4);
 
   @media (min-width: $mobile-portrait) {
     order: initial;
     top: 0;
     bottom: initial;
-    height: 5rem;
+    height: 4rem;
   }
 }
