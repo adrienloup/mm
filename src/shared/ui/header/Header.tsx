@@ -5,8 +5,6 @@ export const Header = () => {
     <header
       className={styles.header}
       role="banner"
-    >
-      header
-    </header>
+    ></header>
   );
 };

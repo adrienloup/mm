@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Hgroup } from '@/src/shared/ui/hgroup/Hgroup.tsx';
-import { Page } from '@/src/shared/ui/page/Page.tsx';
+// import { Page } from '@/src/shared/ui/page/Page.tsx';
 
 export default function ProfilePage() {
   return (
-    <Page>
+    <>
       <Hgroup
         title="Déterminez"
         subtitle="votre métabolisme basal"
@@ -21,6 +21,6 @@ export default function ProfilePage() {
         passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.<div style={{ height: '2000px' }}></div>
       </div>
-    </Page>
+    </>
   );
 }
