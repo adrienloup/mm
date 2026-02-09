@@ -1,0 +1,32 @@
+.page {
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+  //animation: Enter 500ms ease;
+}
+
+.enter {
+  opacity: 0;
+  transform: translate3d(-100px, 0, 0);
+  //animation: Enter 500ms ease;
+}
+
+.idle {
+  //opacity: 1;
+  //transform: translate3d(0, 0, 0);
+  animation: Idle 200ms ease;
+}
+
+//@keyframes Enter {
+//  100% {
+//    opacity: 0;
+//    transform: translate3d(-10px, 0, 0);
+//  }
+//}
+//
+@keyframes Idle {
+  0% {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+}
