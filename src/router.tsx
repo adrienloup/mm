@@ -1,14 +1,22 @@
-// import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-// import { Outlet, useLocation } from 'react-router-dom';
-// import type { ChildrenType } from '@/src/shared/type/Children.ts';
-import { useLocation } from 'react-router-dom';
-import type { ChildrenType } from '@/src/shared/type/Children.ts';
+import { useLocation, useRoutes } from 'react-router-dom';
+import MenuPage from '@/src/page/menu/MenuPage.tsx';
+import ProfilePage from '@/src/page/profile/ProfilePage.tsx';
 import { Footer } from '@/src/shared/ui/footer/Footer.tsx';
 import { Header } from '@/src/shared/ui/header/Header.tsx';
+import '@/src/app/App.scss';
 
-export const Page = ({ children }: { children: ChildrenType }) => {
+export default function Router() {
   const location = useLocation();
+
+  const page = useRoutes(
+    [
+      { path: '/profile', element: <ProfilePage /> },
+      { path: '/menu', element: <MenuPage /> },
+      { path: '*', element: <ProfilePage /> },
+    ],
+    location
+  );
 
   return (
     <>
@@ -23,11 +31,12 @@ export const Page = ({ children }: { children: ChildrenType }) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -10 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
+          role="main"
         >
-          {children}
+          {page}
         </motion.main>
       </AnimatePresence>
       <Footer />
     </>
   );
-};
+}

@@ -1,8 +1,9 @@
 import { lazy, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { delay } from '@/src/shared/utils/delay';
 import '@/src/app/App.scss';
 
-const AppRouter = lazy(() => delay(import('@/src/app/AppRouter.tsx'), 2e3));
+const Router = lazy(() => delay(import('@/src/router.tsx'), 2e3));
 
 export default function App() {
   return (
@@ -11,7 +12,9 @@ export default function App() {
         <div style={{ fontFamily: 'Title, sans-serif', fontSize: '4rem', color: '#fff' }}>Chargement...</div>
       }
     >
-      <AppRouter />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </Suspense>
   );
 }
